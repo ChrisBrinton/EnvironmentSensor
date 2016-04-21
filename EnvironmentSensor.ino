@@ -25,10 +25,10 @@
 
 //Since we're going to have multiple instances of this device, they all need a unique identifier
 //Use this pound define to set it
-#define UNIQUE_DEVICE_ID "Test1"
+#define UNIQUE_DEVICE_ID "MaineLRC1"
 #define FIRMWARE_VERSION "prod_0_1"
 
-// Data wire is plugged into pin 2 on the Arduino
+// Data wire is plugged into pin 4 on the Arduino
 #define ONE_WIRE_BUS 4
 
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
@@ -150,7 +150,7 @@ void setup() {
   DailyHighExtTempF = -100;
   DailyLowIntTempF = 150;
   DailyLowExtTempF = 150;
-  readDelay = 450; // create as close to a 1 sec loop as can be managed
+  readDelay = 950; // starting guess to create as close to a 1 sec loop as can be managed
   
   // Setup MQTT subscription for onoff feed.
   mqtt.subscribe(&onoffbutton);
